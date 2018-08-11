@@ -200,16 +200,25 @@ if(navigator.geolocation){
                 
             } ) ;
     })
+	let Weather = document.getElementById("weather");
+	let el = document.querySelector(".dis-none");
 
-    $(document).ready(function(){
-        
-        $(".weather").on('click', function(){
-            $(this).next("#weather_popup").toggleClass("dis-none");  
-        })
-        // $(".weather").on('click', function(){
-        //     $(this).next("#weather_popup").css({"display":"none"});
-        // })
-    })
+	
+	function togglePopup(e) {
+		if( el.classList.contains("dis-none") ) {
+			console.log("weather details is hidden");
+			el.classList.remove("dis-none");
+		}else{
+			console.log("you can see weather details");
+			el.classList.add("dis-none");
+		}
+	
+	}//function that toggle view of the weather popup on click
+	
+	Weather.addEventListener('click', ()=>{
+		togglePopup();
+	});
+
 } 
 
 

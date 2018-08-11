@@ -21,7 +21,7 @@
         }
         
         #weather_popup{
-            display: none;
+            {# display: none; #}
             width: 500px;
             background: #333;
             margin-top: 20px;
@@ -42,6 +42,7 @@
             opacity: 1;
         }
         .f-10{font-size: 10px;}
+		.dis-none{ display:none; }
     </style>
 </head>
 <body>
@@ -52,7 +53,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-md-1">
                     <h3 id="data"></h3>
-                    <div class="weather m-auto py-3">
+                    <div class="weather m-auto py-3" id="weather">
                         <span id="weather-icon"><img src="" alt="" id="icon"></span>
                         <br>
                         <span id="current_weather"><span id="temp"></span>&deg;C</span>
@@ -62,7 +63,7 @@
                         <span id="city" class="" >
                         </span>
                     </div>
-                    <div class="weather-popup" id="weather_popup">
+                    <div class="weather-popup dis-none" id="weather_popup">
                         <div class="weather_wrapper">
                             <div class='row'>
                                 <div class='col-md-8'>
